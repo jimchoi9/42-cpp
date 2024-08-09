@@ -42,7 +42,35 @@ std::cout << "idx : " << index << std::endl;
 
 void PhoneBook::display(int index)
 {
-	(void)index;
+	if (index >= 0 && index < 8 && contact[index].get_first_name().size() > 0)
+	{
+		std::cout << "============Index {" << index << "}===============\n";
+		std::cout << " Index | FirstName | LastName | NickName | PhoneNum |  Secret  |\n";
+		std::cout << std::setw(contact[index].get_first_name().size() + 2);
+		std::cout <<"| " << contact[index].get_first_name();
+        std::cout << std::setw(contact[index].get_last_name().size() + 2);
+        std::cout << "| " << contact[index].get_last_name();
+        std::cout << std::setw(contact[index].get_nick_name().size() + 2);
+        std::cout << "| " << contact[index].get_nick_name();
+		std::cout << std::setw(contact[index].get_phone_number().size() + 2);
+        std::cout << "| " << contact[index].get_phone_number();
+        std::cout << std::setw(contact[index].get_secret().size() + 2);
+        std::cout << "| " << contact[index].get_secret();
+		std::cout << "---------------------------------------------\n";
+	}
+	else
+	{
+		std::cout << "===================Phone Book================\n";
+		std::cout << "   Index   |FirstName | LastName | NickName |\n";
+		std::cout << "---------------------------------------------\n";
+		std::cout << "-0123456789-0123456789-0123456789-0123456789-\n";
+		for(int i = 0; i < 8; i++)
+		{
+			std::cout << std::setw(10);
+
+		}
+	}
+	
 }
 
 

@@ -14,7 +14,9 @@ class PhoneBook
 		int index;
 	public:
 		PhoneBook()
-		{index = 0;}
+		{index = 0;
+		
+		}
 		void phone_book();
 		bool add_contact();
 		std::string input_info();
@@ -22,4 +24,4 @@ class PhoneBook
 
 };
 
-#endif
+#endif 

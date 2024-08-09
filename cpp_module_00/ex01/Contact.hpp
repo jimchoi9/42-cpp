@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 class Contact
 {
@@ -14,11 +15,12 @@ class Contact
 		std::string phone_number;
 		std::string secret;
 	public:
-		bool set_first_name(const std::string &str);
-		bool set_last_name(const std::string &str);
-		bool set_nick_name(const std::string &str);
-		bool set_phone_number(const std::string &str);
-		bool set_secret(const std::string &str);
+		Contact() : first_name(""), last_name(""), nick_name(""), phone_number(""), secret(""){}
+		bool set_first_name(std::string &str);
+		bool set_last_name(std::string &str);
+		bool set_nick_name(std::string &str);
+		bool set_phone_number(std::string &str);
+		bool set_secret(std::string &str);
 		std::string get_first_name()
 		{return first_name;}
 		std::string get_last_name()

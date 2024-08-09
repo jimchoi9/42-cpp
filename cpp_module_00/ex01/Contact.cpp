@@ -1,6 +1,6 @@
 #include "Contact.hpp"
 
-bool Contact::set_first_name(const std::string &str)
+bool Contact::set_first_name(std::string &str)
 {
 	if (str.empty())
 	{
@@ -10,7 +10,7 @@ bool Contact::set_first_name(const std::string &str)
 	first_name = str;
 	return true;
 }
-bool Contact::set_last_name(const std::string &str)
+bool Contact::set_last_name(std::string &str)
 {
 	if (str.empty())
 	{
@@ -20,7 +20,7 @@ bool Contact::set_last_name(const std::string &str)
 	last_name = str;
 	return true;
 }
-bool Contact::set_nick_name(const std::string &str)
+bool Contact::set_nick_name(std::string &str)
 {
 	if (str.empty())
 	{
@@ -30,7 +30,7 @@ bool Contact::set_nick_name(const std::string &str)
 	nick_name = str;
 	return true;
 }
-bool Contact::set_phone_number(const std::string &str)
+bool Contact::set_phone_number(std::string &str)
 {
 	if (str.empty())
 	{
@@ -43,12 +43,11 @@ bool Contact::set_phone_number(const std::string &str)
 		std::cout << "Invalid phone number" << std::endl;
 			return false;
 	}
-		std::cout << "Phone_number is good" << std::endl;
 	phone_number = str;
 	return true;
 }
 
-bool Contact::set_secret(const std::string &str)
+bool Contact::set_secret(std::string &str)
 {
 	if (str.empty())
 	{
