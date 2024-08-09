@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include "Contact.hpp"
 
 
@@ -20,7 +21,8 @@ class PhoneBook
 		void phone_book();
 		bool add_contact();
 		std::string input_info();
-		void display(int index);
+		void display();
+		void print_substr(const std::string str);
 
 };
 
