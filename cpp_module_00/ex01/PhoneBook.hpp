@@ -20,10 +20,10 @@ class PhoneBook
 		}
 		void phone_book();
 		bool add_contact();
-		std::string input_info();
+		std::string input_info(std::string str);
 		void display();
 		void print_substr(const std::string str);
-
+		bool is_print_string(const std::string str);
 };
 
 #endif 
