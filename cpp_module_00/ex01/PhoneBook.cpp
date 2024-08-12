@@ -127,11 +127,11 @@ void PhoneBook::phone_book()
     {
         std::string input;
 		input = input_info( "\nEnter the command : ");
-		if (strcmp(input.c_str(), "ADD") == 0)
+		if (input == "ADD")
 			add_contact(); 
-		else if (strcmp(input.c_str(), "SEARCH") == 0)
+		else if (input =="SEARCH")
 			display();
-		else if (strcmp(input.c_str(), "EXIT") == 0)
+		else if (input == "EXIT")
 		{
 			std::cout << "The program quits\n";
 			return ;
