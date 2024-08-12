@@ -1,5 +1,8 @@
 #include "PhoneBook.hpp"
 
+
+PhoneBook::PhoneBook() : index(0){}
+
 bool PhoneBook::is_print_string(std::string str)
 {
 	for (int i = 0; i < (int)str.size(); i++)

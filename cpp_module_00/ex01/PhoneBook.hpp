@@ -14,10 +14,7 @@ class PhoneBook
 		Contact contact[8];
 		int index;
 	public:
-		PhoneBook()
-		{index = 0;
-		
-		}
+		PhoneBook();
 		void phone_book();
 		bool add_contact();
 		std::string input_info(std::string str);
