@@ -7,8 +7,11 @@ bool PhoneBook::is_print_string(std::string str)
 {
 	for (int i = 0; i < (int)str.size(); i++)
 	{
+		
 		if (!isprint(str[i]))
+		{
 			return false;
+		}
 	}
 	return true;
 }
@@ -38,16 +41,31 @@ bool PhoneBook::add_contact()
 {
 	std::string number;
 	index = index % 8;
-
-    contact[index].set_first_name(input_info("Enter first name : "));
-    contact[index].set_last_name(input_info("Enter last name : "));
-    contact[index].set_nick_name(input_info("Enter nick name : "));
+	while (true)
+	{
+		if(contact[index].set_first_name(input_info("Enter first name : ")))
+			break;
+	}
+	while (true)
+	{
+		if(contact[index].set_last_name(input_info("Enter last name : ")))
+			break;
+	}
+	while (true)
+	{
+		if(contact[index].set_nick_name(input_info("Enter nick name : ")))
+			break;
+	}
 	while(true)
 	{
 		if (contact[index].set_phone_number(input_info("Enter phone number : ")))
 			break;
 	}
-    contact[index].set_secret(input_info("Enter secret : "));
+	while (true)
+	{
+		if(contact[index].set_secret(input_info("Enter secret : ")))
+			break;
+	}
 	index ++;
 	return (true);
 }

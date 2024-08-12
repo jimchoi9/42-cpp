@@ -23,9 +23,16 @@ bool Contact::set_first_name(const std::string &str)
 {
 	if (str.empty())
 	{
-		std::cout << "First_name is empty" << std::endl;
 		return false;
 	}
+	bool empty = true;
+	for(size_t i = 0; i < str.size(); i++)
+	{
+		if (!std::isspace(str[i]))
+			empty = false;
+	}
+	if (empty)
+		return false;
 	first_name = str;
 	return true;
 }
@@ -33,9 +40,16 @@ bool Contact::set_last_name(const std::string &str)
 {
 	if (str.empty())
 	{
-		std::cout << "Last_name is empty" << std::endl;
 		return false;
 	}
+	bool empty = true;
+	for(size_t i = 0; i < str.size(); i++)
+	{
+		if (!std::isspace(str[i]))
+			empty = false;
+	}
+	if (empty)
+		return false;
 	last_name = str;
 	return true;
 }
@@ -43,9 +57,16 @@ bool Contact::set_nick_name(const std::string &str)
 {
 	if (str.empty())
 	{
-		std::cout << "Nick_name is empty" << std::endl;
 		return false;
 	}
+	bool empty = true;
+	for(size_t i = 0; i < str.size(); i++)
+	{
+		if (!std::isspace(str[i]))
+			empty = false;
+	}
+	if (empty)
+		return false;
 	nick_name = str;
 	return true;
 }
@@ -71,9 +92,16 @@ bool Contact::set_secret(const std::string &str)
 {
 	if (str.empty())
 	{
-		std::cout << "Secret is empty" << std::endl;
 		return false;
 	}
+	bool empty = true;
+	for(size_t i = 0; i < str.size(); i++)
+	{
+		if (!std::isspace(str[i]))
+			empty = false;
+	}
+	if (empty)
+		return false;
 	secret = str;
 	return true;
 }
