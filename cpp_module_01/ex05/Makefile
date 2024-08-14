@@ -1,16 +1,16 @@
 CPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
-NAME = HI_THIS_IS_BRAIN
+NAME = Harl
 
 ifdef DEBUG
 	CPPFLAGS += -g3 -fsanitize=address
 endif
 
-SRCS = main.cpp 
+SRCS = main.cpp Harl.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-INCS =
+INCS = Harl.hpp
 
 %.o: %.cpp
 	$(CPP) $(CPPFLAGS)  -c $< -o $@ 

@@ -8,7 +8,7 @@ HumanB::~HumanB()
 
 }
 
-void HumanB::setWeapon(Weapon newWeapon)
+void HumanB::setWeapon(Weapon &newWeapon)
 {
 	this->weapon = &newWeapon;
 }

@@ -1,6 +1,6 @@
 CPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
-NAME = HI_THIS_IS_BRAIN
+NAME = Sed_is_for_losers
 
 ifdef DEBUG
 	CPPFLAGS += -g3 -fsanitize=address
