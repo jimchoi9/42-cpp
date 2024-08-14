@@ -1,6 +1,6 @@
 CPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
-NAME = HI_THIS_IS_BRAIN
+NAME = Unnecessary_violence
 
 ifdef DEBUG
 	CPPFLAGS += -g3 -fsanitize=address
