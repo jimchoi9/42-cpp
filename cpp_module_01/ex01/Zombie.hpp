@@ -12,7 +12,6 @@ public:
 	~Zombie();
 	void announce();
 	void setName(std::string name);
-// Zombie* zombieHorde( int N, std::string name ) 이거 여기 있어도 되는지
 
 private:
     std::string name;
