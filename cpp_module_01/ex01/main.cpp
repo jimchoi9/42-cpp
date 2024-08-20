@@ -3,10 +3,10 @@
 
 Zombie* zombieHorde( int N, std::string name );
 
-void checkLeaks()
-{
-	system("leaks Moar_brainz!");
-}
+// void checkLeaks()
+// {
+// 	system("leaks Moar_brainz!");
+// }
 
 int main()
 {
@@ -19,6 +19,6 @@ int main()
     }
 
     delete [] zombies;
-	atexit(checkLeaks);
+	// atexit(checkLeaks);
     return 0;
 }
