@@ -5,7 +5,10 @@ Point::Point(const Fixed &x, const Fixed &y):x(x),y(y){}
 Point::Point(const Point &a):x(a.getX()), y(a.getY()){}
 Point::~Point(){}
 
-Point &Point::operator=(const Point &a){}
+Point &Point::operator=(const Point &a){
+	(void)a;
+    return *this;
+}
 
 Fixed Point::getX() const{
     return x;

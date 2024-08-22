@@ -11,7 +11,7 @@ int main( void ) {
 
 	Fixed cX(1); Fixed cY(5);
 
-	Fixed dX(7); Fixed dY(2);
+	Fixed dX(2); Fixed dY(2);
 
 	Point a(aX, aY);
 	Point b(bX, bY);

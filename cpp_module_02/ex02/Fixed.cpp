@@ -1,25 +1,19 @@
 #include "Fixed.hpp"
 
 Fixed::Fixed() : num(0){}
-// {	std::cout << "Default constructor called" << std::endl;}
 
 Fixed::Fixed(const int &a) : num(a << f_bits){}
-// {	std::cout << "Int constructor called" << std::endl;	}
 
 Fixed::Fixed(const float &a) : num (static_cast<int>(roundf(a * (1 << f_bits)))){}
-// {	std::cout << "Float constructor called" << std::endl;}
 
 Fixed::~Fixed(){}
-// {	std::cout << "Destructor called" << std::endl;}
 
 Fixed::Fixed(const Fixed &a)
-{	
-	// std::cout << "Copy constructor called" << std::endl;
+{
 	*this = a;
 }
 Fixed& Fixed::operator=(const Fixed &a)
-{	
-	// std::cout << "Copy assignment operator called" << std::endl;
+{
 	this->num = a.getRawBits();
 	return *this;
 }
@@ -107,8 +101,6 @@ const Fixed &Fixed::max(const Fixed &a, const Fixed &b){
 	Fixed tempB(b.toFloat());
 	return tempA >= tempB ? a : b;
 }
-
-
 
 std::ostream &operator<<(std::ostream &os, const Fixed &a)
 {
