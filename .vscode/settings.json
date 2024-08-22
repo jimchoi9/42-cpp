@@ -63,6 +63,9 @@
 		"iomanip": "cpp",
 		"fstream": "cpp",
 		"deque": "cpp",
-		"stack": "cpp"
+		"stack": "cpp",
+		"filesystem": "cpp",
+		"__functional_03": "cpp",
+		"memory_resource": "cpp"
 	}
 }

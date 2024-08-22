@@ -1,5 +1,6 @@
 #pragma once
-
+#include <string>
+#include <iostream>
 class Fixed {
 
     
@@ -12,5 +13,5 @@ class Fixed {
 		void setRawBits( int const raw ); // 고정소수점 수의 원시값 설정
 	private:
 	    int num; //고정소수점 값의 정수값
-		static int const f_bits; //소수부 비트 수를 저장 , 정수 리터럴 8
+		static int const f_bits = 8; //소수부 비트 수를 저장 , 정수 리터럴 8
 };

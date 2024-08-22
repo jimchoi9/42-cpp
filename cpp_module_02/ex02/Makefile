@@ -1,15 +1,15 @@
 CPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
-NAME = Now_we’re_talking
+NAME = Fixed
 ifdef DEBUG
 	CPPFLAGS += -g3 -fsanitize=address
 endif
 
-SRCS = main.cpp 
+SRCS = main.cpp Fixed.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-INCS = 
+INCS = Fixed.hpp
 
 %.o: %.cpp
 	$(CPP) $(CPPFLAGS)  -c $< -o $@ 

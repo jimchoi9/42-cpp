@@ -5,11 +5,11 @@ ifdef DEBUG
 	CPPFLAGS += -g3 -fsanitize=address
 endif
 
-SRCS = main.cpp Fixed.cpp
+SRCS = main.cpp Fixed.cpp Point.cpp bsp.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-INCS = Fixed.hpp
+INCS = Fixed.hpp Point.hpp
 
 %.o: %.cpp
 	$(CPP) $(CPPFLAGS)  -c $< -o $@ 
