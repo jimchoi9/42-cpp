@@ -12,15 +12,15 @@ Fixed::Fixed(const float &a) : num (static_cast<int>(roundf(a * (1 << f_bits))))
 Fixed::~Fixed()
 {	std::cout << "Destructor called" << std::endl;}
 
-Fixed::Fixed(const Fixed &a)
-{	
-	std::cout << "Copy constructor called" << std::endl;
-	*this = a;
-}
+Fixed::Fixed(const Fixed &a) :num(a.num)
+{	std::cout << "Copy constructor called" << std::endl;	}
 Fixed& Fixed::operator=(const Fixed &a)
-{	
+{
 	std::cout << "Copy assignment operator called" << std::endl;
-	this->num = a.getRawBits();
+	if (this != &a)
+	{
+		this->num = a.getRawBits();
+	}
 	return *this;
 }
 
