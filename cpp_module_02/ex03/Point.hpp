@@ -8,8 +8,8 @@ class Point {
 		~Point();
 		Fixed getX()const;
 		Fixed getY()const;
-	private:
 		Point &operator=(const Point &a);
+	private:
 		Fixed const x;
 		Fixed const y;
 		Point();
