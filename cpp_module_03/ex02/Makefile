@@ -1,15 +1,15 @@
 CPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
-NAME = ScavTrap
+NAME = FragTrap
 ifdef DEBUG
 	CPPFLAGS += -g3 -fsanitize=address
 endif
 
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS = main.cpp ClapTrap.cpp FragTrap.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-INCS = ClapTrap.hpp ScavTrap.hpp
+INCS = ClapTrap.hpp FragTrap.hpp
 
 %.o: %.cpp
 	$(CPP) $(CPPFLAGS)  -c $< -o $@ 

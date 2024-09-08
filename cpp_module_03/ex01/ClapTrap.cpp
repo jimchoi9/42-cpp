@@ -1,7 +1,7 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name)
-: name(name)
+ClapTrap::ClapTrap(const std::string &name)
+: name(name), hitPoints(0), energyPoints(0), attackDamage(0)
 {	std::cout << "ClapTrap constructor called" << std::endl;	}
 
 ClapTrap::ClapTrap(const ClapTrap &a) : name(a.name), hitPoints(a.hitPoints), energyPoints(a.energyPoints), attackDamage(a.attackDamage)
@@ -65,6 +65,9 @@ int ClapTrap::getAttackDamage() const
 
 std::string ClapTrap::getName() const
 {	return this->name;	}
+
+// void ClapTrap::setName(const std::string& name)
+// {	this->name = name;	}
 
 void ClapTrap::setHitPoints(const int& hitPoints)
 {	this->hitPoints = hitPoints;	}

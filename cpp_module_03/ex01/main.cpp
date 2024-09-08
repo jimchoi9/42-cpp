@@ -1,19 +1,14 @@
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
-	ClapTrap a("a");
-	a.setAttackDamage(0);
-	a.setEnergyPoints(0);
-	a.setHitPoints(0);
-	ClapTrap b("b");
-	b.setAttackDamage(10);
-	b.setEnergyPoints(10);
-	b.setHitPoints(10);
-
-	a.attack(b.getName());
-	b.takeDamage(a.getAttackDamage());
-	b.beRepaired(10);
-
-	return (0);
+	ScavTrap *scav = new ScavTrap("scav");
+	ClapTrap *clapPtr = scav;
+	ClapTrap *clap2 = new ClapTrap("clap");
+	scav->attack("a");
+	clapPtr->attack("a");
+	clap2->attack("a");
+	delete scav;
+	delete clap2;
+	return 0;
 }
