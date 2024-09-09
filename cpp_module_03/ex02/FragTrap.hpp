@@ -1,9 +1,10 @@
 #pragma once
 #include "ClapTrap.hpp"
 
-class FragTrap : protected ClapTrap
+class FragTrap : public ClapTrap
 {
 	public:
+		FragTrap();
 		FragTrap(const std::string &name);
 		FragTrap(const FragTrap &a);
 		FragTrap &operator=(const FragTrap &a);
@@ -11,5 +12,4 @@ class FragTrap : protected ClapTrap
 
 		void highFivesGuys();
 	private:
-		FragTrap();
 };

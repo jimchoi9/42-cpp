@@ -39,20 +39,6 @@ ScavTrap &ScavTrap::operator = (const ScavTrap &a)
 	return *this;
 }
 
-// ScavTrap::ScavTrap(const ScavTrap &a)
-// : ClapTrap(a)
-// {	std::cout << "ScavTrap copy constructor called" << std::endl;	} 
-
-// ScavTrap &ScavTrap::operator = (const ScavTrap &a)
-// {
-// 	std::cout << "ScavTrap assignation operator called" << std::endl;
-// 	if (this != &a)
-// 	{
-// 		ClapTrap::operator=(a);
-// 	}
-// 	return *this;
-// }
-
 ScavTrap::~ScavTrap()
 {	std::cout << "ScavTrap destructor called" << std::endl;	}
 

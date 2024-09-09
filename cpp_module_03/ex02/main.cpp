@@ -3,12 +3,13 @@
 int main()
 {
 	FragTrap *Frag = new FragTrap("Frag");
-	// ClapTrap *clapPtr = Frag;
-	ClapTrap *clap2 = new ClapTrap("clap");
+	ClapTrap *clapPtr = Frag;
+std::cout << "Frag : " << Frag->getName() << std::endl;
+std::cout << "clapPtr : " << clapPtr->getName() << std::endl;
+
 	Frag->highFivesGuys();
-	// clapPtr->attack("a");
-	clap2->attack("a");
+	clapPtr->attack("a");
 	delete Frag;
-	delete clap2;
+
 	return 0;
 }
