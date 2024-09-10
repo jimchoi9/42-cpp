@@ -11,5 +11,4 @@ class FragTrap : public ClapTrap
 		virtual ~FragTrap();
 
 		void highFivesGuys();
-	private:
 };
