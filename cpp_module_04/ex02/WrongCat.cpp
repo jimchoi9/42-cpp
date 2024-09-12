@@ -1,6 +1,6 @@
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat() : Animal("WrongCat")
+WrongCat::WrongCat() : WrongAnimal("WrongCat")
 {	
 	brain = new Brain();
 	this->brain->setIdea("I am a WrongCat");

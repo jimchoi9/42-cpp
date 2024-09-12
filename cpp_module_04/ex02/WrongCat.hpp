@@ -1,8 +1,8 @@
 #pragma once
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 #include "Brain.hpp"
 
-class WrongCat : public Animal {
+class WrongCat : public WrongAnimal {
 
 	public:
 		WrongCat();

@@ -41,23 +41,7 @@ int main()
 	Dog2.displayBrain();
 
 
-	// WrongCat wrongCat1;
-	// WrongCat wrongCat2 = wrongCat1;
+	// Animal animal;
 
-
-	// std::cout << "WrongCat 1: " << std::endl;
-	// wrongCat1.displayBrain();
-	// std:Animal
-	// Brain dogBrain;
-	// dogBrain.setIdea("I am a dog");
-    // wrongCat1.setBrain(dogBrain);
-
-	
-	// std::cout << "WrongCat 1: " << std::endl;
-	// wrongCat1.displayBrain();
-	// std::cout << "WrongCat 2: " << std::endl;
-    // wrongCat2.displayBrain();
-
-    // Animal animal;
 	return 0;
 }
