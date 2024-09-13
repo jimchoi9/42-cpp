@@ -18,3 +18,27 @@ Character::~Character()
         delete inventory[i];
 }
 
+Character::Character(Character const &a) 
+{
+    name = a.name;
+    for (int i = 0; i < 4; i++)
+        inventory[i] = a.inventory[i]->clone();
+}
+
+Character & Character::operator=(Character const &a) 
+{
+    name = a.name;
+    for (int i = 0; i < 4; i++)
+    {
+        if (inventory[i])
+            delete inventory[i];
+        inventory[i] = a.inventory[i]->clone();
+    }
+    return *this;
+}
+
+std::string const & Character::getName() const
+{
+    return name;
+}
+
