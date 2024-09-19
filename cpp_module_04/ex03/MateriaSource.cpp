@@ -15,7 +15,7 @@ MateriaSource::~MateriaSource()
 	}
 }
 
-MateriaSource::MateriaSource(const MateriaSource& a): idx(idx)
+MateriaSource::MateriaSource(const MateriaSource& a)
 {
 	for (int i = 0; i < 4; i++)
 	{
@@ -24,6 +24,7 @@ MateriaSource::MateriaSource(const MateriaSource& a): idx(idx)
 		else
 			materia[i] = NULL;
 	}
+	this->idx = a.idx;
 }
 
 MateriaSource &MateriaSource::operator=(const MateriaSource &a)
@@ -45,13 +46,14 @@ MateriaSource &MateriaSource::operator=(const MateriaSource &a)
 
 void MateriaSource::learnMateria(AMateria*a)
 {
-	if (idx < 3 && a)
+	for(int i = 0; i < 4; i++)
 	{
-		materia[idx] = a;
-		idx++;
+		if (!materia[i])
+		{
+			materia[i] = a;
+			return ;
+		}
 	}
-	else
-		return ;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)

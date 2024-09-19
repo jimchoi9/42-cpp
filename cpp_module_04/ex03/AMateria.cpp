@@ -27,5 +27,5 @@ std::string const &AMateria::getType() const
 
 void AMateria::use(ICharacter &target)
 {
-	std::cout << "Use " << std::endl;
+	std::cout << "Use "<< target.getName() << std::endl;
 }

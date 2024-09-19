@@ -1,5 +1,6 @@
 #include "ICharacter.hpp"
 
+
 class Character : public ICharacter {
 	public:
 		Character();
@@ -14,4 +15,9 @@ class Character : public ICharacter {
 	private:
 		std::string name;
 		AMateria* inventory[4];
+		int size;
+		static AMateria *floor[10];
+		static void displayFloor();
+		static void floorHandler(AMateria *m);
+		static int fIdx;
 };
