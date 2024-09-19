@@ -5,13 +5,13 @@ class AMateria;
 AMateria *Character::floor[10] = {0, };
 int Character::fIdx = 0;
 
-Character::Character() : name("default") , size(0)
+Character::Character() : name("default") 
 {
 	for (int i = 0; i < 4; i++)
 		inventory[i] = NULL;
 }
 
-Character::Character(const std::string& name) : name(name) , size(0)
+Character::Character(const std::string& name) : name(name)
 {
     for (int i = 0; i < 4; i++)
         inventory[i] = NULL;
@@ -23,21 +23,28 @@ Character::~Character()
         delete inventory[i];
 }
 
-Character::Character(Character const &a) : name(a.name), size(a.size)
+Character::Character(Character const &a) : name(a.name)
 {
     for (int i = 0; i < 4; i++)
-        inventory[i] = a.inventory[i]->clone();
+	{
+		if (a.inventory[i])
+			inventory[i] = a.inventory[i]->clone();
+		else
+			inventory[i] = NULL;
+	}
 }
 
 Character & Character::operator=(Character const &a) 
 {
     name = a.name;
-    size = a.size;
     for (int i = 0; i < 4; i++)
     {
         if (inventory[i])
             delete inventory[i];
-        inventory[i] = a.inventory[i]->clone();
+		if (a.inventory[i])
+			inventory[i] = a.inventory[i]->clone();
+		else
+			inventory[i] = NULL;
     }
     return *this;
 }
@@ -56,21 +63,19 @@ void Character::equip(AMateria *m)
         if (!inventory[i])
         {
             inventory[i] = m;
-            size ++;
             return;
         }
     }
-    // std::cout << "Inventory is full" << std::endl;
+	delete m;
 }
 
 void Character::unequip(int idx)
 {
     if (idx < 0 || idx >= 4 ||!inventory[idx])
         return;
-    // TODO: 아이템 버리기
+
     floorHandler(inventory[idx]);
     inventory[idx] = NULL;
-    // this->size --;
 }
 
 void Character::use(int idx, ICharacter &target)
@@ -78,14 +83,16 @@ void Character::use(int idx, ICharacter &target)
     if (idx < 0 || idx >= 4 || !inventory[idx])
         return;
     this->inventory[idx]->use(target);
-    displayFloor();
 }
 
 void Character::floorHandler(AMateria *m)
 {
     fIdx = fIdx % 10;
     if (floor[fIdx])
+	{
+
         delete floor[fIdx];
+	}
     floor[fIdx] = m;
     fIdx++;
 }

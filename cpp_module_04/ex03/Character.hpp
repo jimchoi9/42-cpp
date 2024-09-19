@@ -12,12 +12,11 @@ class Character : public ICharacter {
 		virtual void equip(AMateria* m);
 		virtual void unequip(int idx);
 		virtual void use(int idx, ICharacter& target);
+		static void displayFloor();
 	private:
 		std::string name;
 		AMateria* inventory[4];
-		int size;
 		static AMateria *floor[10];
-		static void displayFloor();
 		static void floorHandler(AMateria *m);
 		static int fIdx;
 };

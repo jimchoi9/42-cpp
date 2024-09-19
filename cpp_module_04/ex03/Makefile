@@ -7,12 +7,16 @@ ifdef DEBUG
 endif
 
 SRCS = main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp MateriaSource.cpp IMateriaSource.cpp ICharacter.cpp
-OBJS = $(SRCS:.cpp=.o)
 
-INCS = Ice.hpp Cure.hpp Character.hpp MateriaSource.hpp AMateria.hpp IMateriaSource.hpp ICharacter.hpp
+OBJ_DIR = objs
 
-%.o: %.cpp
-	$(CPP) $(CPPFLAGS)  -c $< -o $@ 
+OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
+
+INCS =Ice.hpp Cure.hpp Character.hpp MateriaSource.hpp AMateria.hpp IMateriaSource.hpp ICharacter.hpp
+
+$(OBJ_DIR)/%.o: %.cpp
+	@mkdir -p $(OBJ_DIR)
+	@$(CPP) $(CPPFLAGS)  -c -o $@ $<
 
 all: $(NAME)
 
@@ -21,7 +25,7 @@ $(NAME): $(OBJS) $(INCS)
 
 clean:
 	rm -rf $(OBJS)
-
+	rm -rf $(OBJ_DIR)
 fclean: clean
 	rm -f $(NAME)
 
