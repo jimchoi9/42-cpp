@@ -22,5 +22,6 @@ wrong->makeSound();
 delete meta;
 delete j;
 delete i;
+delete wrong;
 return 0;
 }

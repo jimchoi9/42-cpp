@@ -43,6 +43,10 @@ void Dog::setBrain(const Brain &brain)
 
 void Dog::displayBrain() const
 {
-	for (int i = 0; i < this->brain->getSize(); i++)
-		std::cout << "brain" <<i <<" : " << this->brain->getIdea(i) << std::endl;
+	for (int i = 0; i < 100; i++)
+	{
+		if (this->brain->getIdea(i) != "")
+			std::cout << "brain" <<i <<" : " << this->brain->getIdea(i) << std::endl;
+
+	}
 }

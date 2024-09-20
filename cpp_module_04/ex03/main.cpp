@@ -52,10 +52,10 @@ int main()
 	Character jimchoi = Character("jimchoi");
 	jimchoi.equip(src->createMateria("ice"));
 	Character test;
-	test.equip(src->createMateria("cure"));
 
 	test = jimchoi;
-	test.use(0, test);
+	test.equip(src->createMateria("cure"));
+	jimchoi.use(1, test);
 
 	std::cout << "\n\n==========={test 4}===========\n" << std::endl;
 

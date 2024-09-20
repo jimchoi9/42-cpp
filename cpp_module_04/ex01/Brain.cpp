@@ -1,9 +1,7 @@
 #include "Brain.hpp"
 
-Brain::Brain():size(0)
+Brain::Brain():idx(0)
 {
-	for(int i=0; i < 100; i++)
-		this->ideas[i] = "\0";
 	this->setIdea("Who am I?");
 	std::cout << "Brain constructor called" << std::endl;
 }
@@ -15,7 +13,7 @@ Brain::Brain(const Brain& a)
 {
 	for(int i=0; i < 100; i++)
 		this->ideas[i] = a.ideas[i];
-	this->size = a.size;
+	this->idx = a.idx;
 	std::cout << "Brain copy constructor called" << std::endl;
 }
 Brain & Brain::operator=(const Brain& a)
@@ -25,7 +23,7 @@ Brain & Brain::operator=(const Brain& a)
 	{
 		for(int i=0; i < 100; i++)
 			this->ideas[i] = a.ideas[i];
-		this->size = a.size;
+		this->idx = a.idx;
 	}
 	return *this;
 }
@@ -33,22 +31,17 @@ Brain & Brain::operator=(const Brain& a)
 void Brain::setIdea(const std::string &idea)
 {
 
-	size = size % 100;
-	this->ideas[size] = idea;
-	size++;
+	idx = idx % 100;
+	this->ideas[idx] = idea;
+	idx++;
 }
 
 std::string Brain::getIdea(const int &idx) const
 {
-	if (idx < 0 || idx >= size)
+	if (idx < 0 || idx >= 100)
 	{
 		std::cerr << "Brain: Cannot get idea, index out of bounds." << std::endl;
-		return "\0";
+		return "";
 	}
 	return this->ideas[idx];
-}
-
-int Brain::getSize() const
-{
-	return size;
 }

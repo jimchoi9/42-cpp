@@ -1,6 +1,5 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include "WrongCat.hpp"
 #include "Brain.hpp"
 
 
@@ -39,25 +38,5 @@ int main()
 	Dog1.displayBrain();
 	std::cout << "Dog 2: " << std::endl;
 	Dog2.displayBrain();
-
-
-	// WrongCat wrongCat1;
-	// WrongCat wrongCat2 = wrongCat1;
-
-
-	// std::cout << "WrongCat 1: " << std::endl;
-	// wrongCat1.displayBrain();
-	// std:Animal
-	// Brain dogBrain;
-	// dogBrain.setIdea("I am a dog");
-    // wrongCat1.setBrain(dogBrain);
-
-	
-	// std::cout << "WrongCat 1: " << std::endl;
-	// wrongCat1.displayBrain();
-	// std::cout << "WrongCat 2: " << std::endl;
-    // wrongCat2.displayBrain();
-
-    // Animal animal;
 	return 0;
 }

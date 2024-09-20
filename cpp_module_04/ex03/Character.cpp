@@ -20,7 +20,10 @@ Character::Character(const std::string& name) : name(name)
 Character::~Character() 
 {
     for (int i = 0; i < 4; i++)
-        delete inventory[i];
+	{
+		if (inventory[i])
+			delete inventory[i];
+	}
 }
 
 Character::Character(Character const &a) : name(a.name)
@@ -73,7 +76,6 @@ void Character::unequip(int idx)
 {
     if (idx < 0 || idx >= 4 ||!inventory[idx])
         return;
-
     floorHandler(inventory[idx]);
     inventory[idx] = NULL;
 }
@@ -90,7 +92,6 @@ void Character::floorHandler(AMateria *m)
     fIdx = fIdx % 10;
     if (floor[fIdx])
 	{
-
         delete floor[fIdx];
 	}
     floor[fIdx] = m;
