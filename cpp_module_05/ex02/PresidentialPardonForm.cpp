@@ -1,4 +1,4 @@
-#pragma once
+
 #include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string &name) : AForm(name, 25, 5)

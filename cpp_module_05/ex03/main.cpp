@@ -5,7 +5,15 @@
 #include "PresidentialPardonForm.hpp"
 #include "Intern.hpp"
 
-int main(){
+// void checkLeaks()
+// {
+// 	system("leaks Bureaucrat");
+// }
+
+
+int main()
+{
+	// atexit(checkLeaks);
 
 	std::cout << "========================{test 1}========================"<<std::endl;
 	

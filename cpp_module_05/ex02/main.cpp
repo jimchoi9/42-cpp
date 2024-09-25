@@ -4,8 +4,15 @@
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 
-int main(){
+// void checkLeaks()
+// {
+// 	system("leaks Bureaucrat");
+// }
 
+
+int main()
+{
+	// atexit(checkLeaks);
 	std::cout << "========================{test 1}========================"<<std::endl;
 	
 		Bureaucrat tester1("tester1", 145);

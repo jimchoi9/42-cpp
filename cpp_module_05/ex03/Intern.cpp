@@ -21,7 +21,6 @@ AForm * Intern::makeForm(const std::string &name, const std::string &target) con
 	AForm * (Intern::*f[3])(const std::string &name) const = {&Intern::makeShrubberyCreationForm, &Intern::makeRobotomyRequestForm, &Intern::makePresidentialPardonForm};
 
 	int form = -1;
-	// try {
 		for(int i = 0; i < 3; i++)
 		{
 			if (name == names[i])
