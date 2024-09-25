@@ -6,12 +6,16 @@ ifdef DEBUG
 	CPPFLAGS += -g3 -fsanitize=address
 endif
 
-SRCS = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+SRCS = main.cpp Intern.cpp Bureaucrat.cpp AForm.cpp \
+		ShrubberyCreationForm.cpp RobotomyRequestForm.cpp\
+		PresidentialPardonForm.cpp
 OBJ_DIR = objs
 
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
-INCS = Bureaucrat.hpp AForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp
+INCS = Intern.hpp Bureaucrat.hpp AForm.hpp \
+		ShrubberyCreationForm.hpp RobotomyRequestForm.hpp \
+		PresidentialPardonForm.hpp
 
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(OBJ_DIR)
