@@ -19,7 +19,7 @@ class Intern {
 		
 		class TargetException : public std::exception {
 			public:
-				const char *what() const ;
+				const char *what() const throw()  ;
 		};
 	private:
 		

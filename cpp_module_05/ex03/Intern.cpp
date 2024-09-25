@@ -49,6 +49,6 @@ AForm *Intern::makePresidentialPardonForm(const std::string &target) const
 	return new PresidentialPardonForm(target);
 }
 
-const char * Intern::TargetException::what() const  {
+const char * Intern::TargetException::what() const throw()   {
 	return "target doesn't exist";
 }
