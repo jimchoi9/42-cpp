@@ -12,7 +12,7 @@ class ShrubberyCreationForm : public AForm{
 
 		class FileOpenException : public std::exception {
 			public:
-				const char *what() const _NOEXCEPT;
+				const char *what() const ;
 		};
 
 

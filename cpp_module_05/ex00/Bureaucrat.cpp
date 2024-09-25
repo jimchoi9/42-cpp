@@ -47,9 +47,9 @@ std::ostream &operator<<(std::ostream &os, const Bureaucrat &b) {
 	return os;
 }
 
-const char * Bureaucrat::GradeTooHighException::what() const _NOEXCEPT {
+const char * Bureaucrat::GradeTooHighException::what()  {
 	return "Grade too high! ";
 }
-const char * Bureaucrat::GradeTooLowException::what() const _NOEXCEPT {
+const char * Bureaucrat::GradeTooLowException::what()  {
 	return "Grade too low! ";
 }

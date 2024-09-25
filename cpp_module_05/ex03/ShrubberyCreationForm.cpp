@@ -45,6 +45,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const {
 }
 
 
-const char * ShrubberyCreationForm::FileOpenException::what() const _NOEXCEPT {
+const char * ShrubberyCreationForm::FileOpenException::what() const  {
 	return "file open error";
 }

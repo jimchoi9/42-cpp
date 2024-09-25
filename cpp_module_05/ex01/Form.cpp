@@ -50,9 +50,9 @@ std::ostream &operator<<(std::ostream &os, const Form &form) {
 	return os;
 }
 
-const char * Form::GradeTooHighException::what() const _NOEXCEPT {
+const char * Form::GradeTooHighException::what() const  {
 	return "Grade too high! ";
 }
-const char * Form::GradeTooLowException::what() const _NOEXCEPT {
+const char * Form::GradeTooLowException::what() const  {
 	return "Grade too low! ";
 }
