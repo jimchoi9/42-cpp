@@ -15,7 +15,7 @@ int main()
 	// atexit(checkLeaks);
 	std::cout << "========================{test 1}========================"<<std::endl;
 	
-		Bureaucrat tester1("tester1", 145);
+		Bureaucrat tester1("tester1", 123);
 		std::cout << tester1 << std::endl;
 		AForm *form1 = new ShrubberyCreationForm("form1"); // 145 137
 	

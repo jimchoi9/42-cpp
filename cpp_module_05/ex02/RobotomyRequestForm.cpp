@@ -27,7 +27,7 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor) const {
 
 	std::cout << "Drilling sound... Bzzzzz..." << std::endl;
 	std::srand(std::time(0)); // ㅅㅣ드를 현재 시간으로 설정
-    if (rand() % 2) {
+    if (std::rand() % 2) {
 		std::cout << getName() << ", successfully robotomized!" << std::endl;
 	} else {
 		std::cout  << getName() << ", robotomy failed." << std::endl;

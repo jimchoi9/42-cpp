@@ -25,6 +25,7 @@ $(NAME): $(OBJS) $(INCS)
 clean:
 	rm -rf $(OBJS)
 	rm -rf $(OBJ_DIR)
+	rm *_shrubbery
 fclean: clean
 	rm -f $(NAME)
 

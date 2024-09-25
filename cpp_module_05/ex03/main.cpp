@@ -19,7 +19,8 @@ int main()
 	
     Intern someRandomIntern;
     AForm* rrf;
-    rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+    rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
+    // rrf = someRandomIntern.makeForm("robotomy request", "Bender");
 
 		Bureaucrat tester1("tester1", 1);
 		// AForm *form2 = new RobotomyRequestForm("form2"); // 72 45

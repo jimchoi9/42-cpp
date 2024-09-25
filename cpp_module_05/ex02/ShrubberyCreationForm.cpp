@@ -23,7 +23,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const {
 		std::cout << executor.getName() << " couldn't execute " << this->getName() << " because ";
         throw AForm::SignException();
     }
-	std::ofstream file(getName() + "_shrubbery", std::ios::trunc);
+	std::ofstream file(getName()+"_shrubbery");
 	if (file.fail()) {
 		throw FileOpenException();
 	}
