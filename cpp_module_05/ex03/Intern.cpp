@@ -21,7 +21,7 @@ AForm * Intern::makeForm(const std::string &name, const std::string &target) con
 	AForm * (Intern::*f[3])(const std::string &name) const = {&Intern::makeShrubberyCreationForm, &Intern::makeRobotomyRequestForm, &Intern::makePresidentialPardonForm};
 
 	int form = -1;
-	try {
+	// try {
 		for(int i = 0; i < 3; i++)
 		{
 			if (name == names[i])
@@ -32,12 +32,6 @@ AForm * Intern::makeForm(const std::string &name, const std::string &target) con
 
 		std::cout << "Intern creates " << target << std::endl;
 		return (this->*f[form])(target);
-
-	} catch (std::exception &e){
-		std::cout << e.what() << std::endl;
-	}
-
-	return NULL;
 }
 
 AForm *Intern::makeShrubberyCreationForm(const std::string &target) const
