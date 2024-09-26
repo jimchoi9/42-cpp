@@ -1,6 +1,6 @@
 CPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
-NAME = ScalarConverter
+NAME = ex01
 
 ifdef DEBUG
 	CPPFLAGS += -g3 -fsanitize=address

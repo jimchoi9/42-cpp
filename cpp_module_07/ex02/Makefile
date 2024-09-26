@@ -6,12 +6,12 @@ ifdef DEBUG
 	CPPFLAGS += -g3 -fsanitize=address
 endif
 
-SRCS = main.cpp Base.cpp a.cpp b.cpp c.cpp
+SRCS = main.cpp 
 OBJ_DIR = objs
 
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
-INCS = Base.cpp a.cpp b.cpp c.cpp
+INCS = 
 
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(OBJ_DIR)
