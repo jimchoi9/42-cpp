@@ -6,12 +6,12 @@ ifdef DEBUG
 	CPPFLAGS += -g3 -fsanitize=address
 endif
 
-SRCS = main.cpp ScalarConverter.cpp Data.cpp
+SRCS = main.cpp Serializer.cpp Data.cpp
 OBJ_DIR = objs
 
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
-INCS = ScalarConverter.hpp Data.hpp
+INCS = Serializer.hpp Data.hpp
 
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(OBJ_DIR)

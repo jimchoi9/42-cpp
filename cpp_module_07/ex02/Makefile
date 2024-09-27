@@ -11,7 +11,7 @@ OBJ_DIR = objs
 
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
-INCS = 
+INCS = Array.hpp
 
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(OBJ_DIR)
