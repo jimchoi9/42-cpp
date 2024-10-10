@@ -3,7 +3,7 @@
 
 
 #include <iostream>
-
+#include <cctype>
 
 class ScalarConverter {
 
