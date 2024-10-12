@@ -88,6 +88,8 @@ bool isNan(std::string value)
 bool isChar(std::string str) {
 	if (str.size() != 1 || std::isdigit(str[0]))
 		return false;
+	else if (std::isdigit(str[0]) &&(atoi(str.c_str()) <= 0 || atoi(str.c_str()) >= 127))
+		return false;
 	return true;
 
 }
@@ -205,14 +207,7 @@ std::string parsing(std::string str) {
 
 void printChar(std::string str) {
 	char c = str[0];
-	// int num = atoi(str.c_str());
-	std::cout <<"char: ";
-	if (static_cast<int>(c) < 0 || static_cast<int>(c) > 127)
-		std::cout << "impossible" << std::endl;
-	else if(static_cast<int>(c) <= 0 || static_cast<int>(c) >= 127)
-		std::cout << "Non displayable" << std::endl;
-	else
-		std::cout << c << std::endl;
+	std::cout <<"char: " << c << std::endl;
 	std::cout <<"int: "<<  static_cast<int>(c) << std::endl;
 	std::cout <<"float: "<< static_cast<float>(c) <<".0f"<< std::endl;
 	std::cout <<"double: "<< static_cast<double>(c) <<".0"<< std::endl;
