@@ -12,11 +12,15 @@ int main() {
 
 	std::cout << "intArray: ";
 	iter<int>(intArray, 5, print<int>);
+	std::cout <<std::endl;
 	std::cout << "intArray: ";
 	iter(intArray, 5, print2);
+	std::cout <<std::endl;
 	std::cout << "floatArray: ";
 	iter(floatArray, 5, print<float>);
+	std::cout <<std::endl;
 	std::cout << "stringArray: ";
 	iter(stringArray, 5, print<std::string>);
+	std::cout <<std::endl;
 	return 0;
 }
