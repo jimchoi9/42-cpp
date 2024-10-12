@@ -1,3 +1,6 @@
+#ifndef ITER_HPP
+# define ITER_HPP
+
 #include <iostream>
 
 template <typename T, typename F>
@@ -17,3 +20,5 @@ void print(T &value) {
 // 	std::cout << value << " ";
 // 	return value;
 // }
+
+#endif

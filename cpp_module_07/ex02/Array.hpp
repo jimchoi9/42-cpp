@@ -1,3 +1,5 @@
+#ifndef ARRAY_HPP
+# define ARRAY_HPP
 #include <iostream>
 
 template <typename T>
@@ -67,3 +69,5 @@ class Array {
 	    T *data;
 		size_t _size;
 };
+
+#endif
