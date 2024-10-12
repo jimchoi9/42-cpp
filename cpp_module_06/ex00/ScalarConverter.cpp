@@ -205,11 +205,11 @@ std::string parsing(std::string str) {
 
 void printChar(std::string str) {
 	char c = str[0];
-	int num = atoi(str.c_str());
+	// int num = atoi(str.c_str());
 	std::cout <<"char: ";
-	if (num < 0 || num > 127)
+	if (static_cast<int>(c) < 0 || static_cast<int>(c) > 127)
 		std::cout << "impossible" << std::endl;
-	else if(num <= 0 || num >= 127)
+	else if(static_cast<int>(c) <= 0 || static_cast<int>(c) >= 127)
 		std::cout << "Non displayable" << std::endl;
 	else
 		std::cout << c << std::endl;
