@@ -205,7 +205,7 @@ std::string parsing(std::string str) {
 
 void printChar(std::string str) {
 	char c = str[0];
-	int num = atoi(str[0]);
+	int num = atoi(str.c_str());
 	std::cout <<"char: ";
 	if (num < 0 || num > 127)
 		std::cout << "impossible" << std::endl;
@@ -219,7 +219,7 @@ void printChar(std::string str) {
 }
 
 void printInt(std::string str) {
-	int num = std::atoi(str.c_str());
+	int num = atoi(str.c_str());
 	std::cout <<"char: ";
 	if (num < 0 || num > 127)
 		std::cout << "impossible" << std::endl;
@@ -243,7 +243,7 @@ void printDouble(std::string str) {
 		std::cout <<"double: "<< nonStr[nonType] << std::endl;
 		return ;
 	}
-	double num = std::atof(str.c_str());
+	double num = atof(str.c_str());
 	std::cout <<"char: ";
 	if (num < 0 || num > 127)
 		std::cout << "impossible" << std::endl;
@@ -275,7 +275,7 @@ void printFloat(std::string str) {
 		std::cout <<"double: "<< nonStr[nonType] << std::endl;
 		return ;
 	}
-	float num = std::atof(str.c_str());
+	float num = atof(str.c_str());
 	std::cout <<"char: ";
 	if (num < 0 || num > 127)
 		std::cout << "impossible" << std::endl;
