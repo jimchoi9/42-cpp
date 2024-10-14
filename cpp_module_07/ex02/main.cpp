@@ -39,7 +39,7 @@ int main(int, char**)
     {
         numbers[-2] = 0;
     }
-    catch(const std::exception& e)
+    catch(const std::out_of_range& e)
     {
         std::cerr << e.what() << '\n';
     }
@@ -47,7 +47,7 @@ int main(int, char**)
     {
         numbers[MAX_VAL] = 0;
     }
-    catch(const std::exception& e)
+    catch(const std::out_of_range& e)
     {
         std::cerr << e.what() << '\n';
     }
@@ -55,7 +55,7 @@ int main(int, char**)
     {
         numbers[0] = 0;
     }
-    catch(const std::exception& e)
+    catch(const std::out_of_range& e)
     {
         std::cerr << e.what() << '\n';
     }
@@ -76,6 +76,37 @@ int main(int, char**)
     }
 	std::cout << std::endl;
 	
-    delete [] mirror;//
+    delete [] mirror;
+
+	std::cout << "================================================================\n";
+
+	try {
+
+	Array<int> empty;
+	std::cout << "Empty array size: " << empty.size() << std::endl;
+	std::cout << "empty[0]" << empty[0] << std::endl;
+	} catch (const std::out_of_range &e) {
+		std::cerr << e.what() << std::endl;
+	}
+
+	Array<int> arr(5);
+	std::cout << "Array size: " << arr.size() << std::endl;
+	arr[0] = 42;
+	Array<int> copy(arr);
+	arr[1] = 42;
+
+	arr = copy;
+	arr[2] = 42;
+
+	std::cout << " arr[0] " << arr[0] << std::endl;
+	std::cout << " arr[1] " << arr[1] << std::endl;
+	std::cout << " arr[2] " << arr[2] << std::endl;
+    std::cout << "copy[0] " << copy[0] << std::endl;
+    std::cout << "copy[1] " << copy[1] << std::endl;
+    std::cout << "copy[2] " << copy[2] << std::endl;
+
+
+    Array<int> arr2(10);
+
     return 0;
 }

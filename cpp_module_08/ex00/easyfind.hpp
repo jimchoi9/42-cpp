@@ -14,12 +14,16 @@ public:
 };
 
 template <typename T>
-T easyfind(T t, int find)
+typename T::iterator easyfind(T t, int find)
 {
 	typename T::iterator it = std::find(t.begin(), t.end(), find);
     if (it == t.end())
-        std::cout << "Element not found" << std::endl;
-    return *it;
+	{
+
+		throw NotFoundException();
+	}
+        // std::cout << "Element not found" << std::endl;
+    return it;
 }
 
 #endif
