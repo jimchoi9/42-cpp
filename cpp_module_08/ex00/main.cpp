@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <deque>
+#include <algorithm>
 
 int main( void ) {
 
