@@ -10,8 +10,9 @@ class MutantStack : public std::stack<T> {
 		MutantStack() : std::stack<T>() {}
 		MutantStack(const MutantStack &a) : std::stack<T>(a) {}
 		MutantStack &operator=(const MutantStack &a) {
-			std::stack<T>::operator=(a);
-			return *this;
+			if (this != &a) {
+				std::stack<T>::operator=(a);
+			}
 		}
 		~MutantStack() {}
 
