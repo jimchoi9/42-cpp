@@ -1,6 +1,6 @@
 CPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
-NAME = ex00
+NAME = ex02
 
 ifdef DEBUG
 	CPPFLAGS += -g3 -fsanitize=address
@@ -11,7 +11,7 @@ OBJ_DIR = objs
 
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
-INCS = 
+INCS = MutantStack.hpp	
 
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(OBJ_DIR)

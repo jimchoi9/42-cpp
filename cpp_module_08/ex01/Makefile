@@ -1,17 +1,17 @@
 CPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
-NAME = ex00
+NAME = ex01
 
 ifdef DEBUG
 	CPPFLAGS += -g3 -fsanitize=address
 endif
 
-SRCS = main.cpp 
+SRCS = main.cpp span.cpp
 OBJ_DIR = objs
 
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
-INCS = 
+INCS = span.hpp
 
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(OBJ_DIR)
