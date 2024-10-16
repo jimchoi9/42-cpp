@@ -17,13 +17,13 @@ int main( void ) {
 	try {
 	std::vector<int>::iterator iter = easyfind(v, 0);
 	std::cout << *iter << std::endl;
-	} catch (const std::exception &e) {
+	} catch (const std::out_of_range &e) {
 		std::cout << e.what() << std::endl;
 	}
 	try {
 	std::vector<int>::iterator iter = easyfind(v, 9);
 	std::cout << *iter << std::endl;
-	} catch (const std::exception &e) {
+	} catch (const std::out_of_range &e) {
 		std::cout << e.what() << std::endl;
 	}
 

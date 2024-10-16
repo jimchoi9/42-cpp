@@ -1,8 +1,6 @@
 #include "span.hpp"
 
-Span::Span(unsigned int n) : _size(n) {
-	// v.resize(_size);
-}
+Span::Span(unsigned int n) : _size(n) {}
 
 Span::~Span() {
 }
@@ -27,14 +25,14 @@ void Span::addRange(const int &start, const int &end) {
 	for (int i = start; i <= end; i++)
 	{
 		if (v.size() == _size)
-			throw std::out_of_range("Span is full");
+			throw std::out_of_range(std::string("Span is full"));
 		v.push_back(i);
 	}
 }
 
 int Span::shortestSpan() const {
 	if (v.size() < 2)
-		throw std::out_of_range("Span is too short");
+		throw std::out_of_range(std::string("Span is too short"));
 	std::vector<int> tmp = v;
 	std::sort(tmp.begin(), tmp.end());
 	int min = INT_MAX;
@@ -47,7 +45,7 @@ int Span::shortestSpan() const {
 
 int Span::longestSpan() const {
 	if (v.size() < 2)
-		throw std::out_of_range("Span is too short");
+		throw std::out_of_range(std::string("Span is too short"));
 	std::vector<int> tmp = v;
 	std::sort(tmp.begin(), tmp.end());
 	return tmp[tmp.size() - 1] - tmp[0];
