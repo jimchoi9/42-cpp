@@ -5,6 +5,8 @@
 #include <vector>
 #include <list>
 #include <sstream>
+#include <cmath>
+#include <cstdlib>
 
 
 class Pmergeme {

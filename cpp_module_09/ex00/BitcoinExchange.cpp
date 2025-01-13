@@ -22,7 +22,9 @@ BitcoinExchange::~BitcoinExchange() {
 
 void BitcoinExchange::readData() {
 
-	std::ifstream file(_dataPath);
+	// std::ifstream file(_dataPath);
+	std::ifstream file;
+	file.open(_dataPath.c_str());
 	if (!file.is_open()) {
 		throw std::out_of_range("Error: could not open file.");
 	}
@@ -83,7 +85,10 @@ bool BitcoinExchange::isValidDate(const std::string& dateStr) {
 }
 
 void BitcoinExchange::calculateBitcoinCost() {
-	std::ifstream inputFile(_inputDataPath);
+	// std::ifstream inputFile(_inputDataPath);
+	std::ifstream inputFile;
+	inputFile.open(_inputDataPath.c_str());
+
 	if (!inputFile.is_open()) {
 		throw std::out_of_range("Error: could not open file.");
 	}

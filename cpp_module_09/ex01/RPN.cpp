@@ -26,7 +26,7 @@ void RPN::readInput(std::string &str) {
 	while (ss >> tmp) {
 		if (checkInput(tmp)){
 			if (isdigit(tmp[0])) {
-				_calculateStack.push(atoi(tmp.c_str()));
+				_calculateStack.push(std::atoi(tmp.c_str()));
 				// std::cout << "push: " << tmp << std::endl;
 			}
 			else {
